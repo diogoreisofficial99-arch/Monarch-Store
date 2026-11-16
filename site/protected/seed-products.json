@@ -1,0 +1,59 @@
+[
+  {
+    "id": "desenvolvimento-personalizado",
+    "featured": true,
+    "category": "solucoes",
+    "categoryName": "Projeto personalizado",
+    "name": "Desenvolvimento personalizado",
+    "priceLabel": "Orçamento sob consulta",
+    "priceCents": null,
+    "image": "/assets/imgs/shop/script-example.svg",
+    "description": "Um projeto feito à medida para MTA:SA, Discord ou para integrar os dois.",
+    "details": [
+      "Scripts e sistemas personalizados para servidores MTA:SA.",
+      "Bots Discord e automações adaptados à tua comunidade.",
+      "Integrações entre o servidor e o Discord, definidas conforme os requisitos.",
+      "Funcionalidades, prazo e orçamento combinados antes do desenvolvimento."
+    ],
+    "active": true,
+    "sortOrder": 0
+  },
+  {
+    "id": "sistema-garagem-mta",
+    "featured": true,
+    "category": "mtasa",
+    "categoryName": "Script MTA:SA",
+    "name": "Sistema de Garagem MTA:SA",
+    "priceLabel": "14,99 €",
+    "priceCents": 1499,
+    "image": "/assets/imgs/shop/script-example.svg",
+    "description": "Gere os veículos da tua comunidade com um sistema de garagem configurável para MTA:SA.",
+    "details": [
+      "Guarda e consulta os veículos associados a cada jogador.",
+      "Configura vários pontos de garagem no mapa.",
+      "Define permissões de acesso e regras de utilização.",
+      "Organiza o catálogo de veículos de forma simples."
+    ],
+    "active": true,
+    "sortOrder": 1
+  },
+  {
+    "id": "bot-tickets-discord",
+    "featured": true,
+    "category": "discord",
+    "categoryName": "Bot para Discord",
+    "name": "Bot de Tickets para Discord",
+    "priceLabel": "9,99 €",
+    "priceCents": 999,
+    "image": "/assets/imgs/shop/bot-tickets-discord.svg",
+    "description": "Organiza o suporte do teu servidor com tickets privados e um fluxo simples para a equipa.",
+    "details": [
+      "Tickets privados abertos a partir de um painel no Discord.",
+      "Categorias e permissões configuráveis para a tua equipa.",
+      "Ações para assumir, fechar e acompanhar cada pedido.",
+      "Registo dos tickets fechados para consulta da equipa."
+    ],
+    "active": true,
+    "sortOrder": 2
+  }
+]

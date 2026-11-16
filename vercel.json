@@ -1,0 +1,11 @@
+{
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "{site/**,assets/**,package.json}",
+      "maxDuration": 30
+    }
+  },
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/index" }
+  ]
+}

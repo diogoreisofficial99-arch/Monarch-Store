@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090b">
+    <meta name="description" content="Scripts personalizados para MTA:SA e bots para Discord.">
+    <title>Monarch Store</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="../assets/imgs/favicon-monarch.png">
+    <link rel="preload" href="../assets/fonts/Geist-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Anton-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script/api.js?v=4" defer></script>
+    <script src="./script/products.js?v=2" defer></script>
+    <script src="./script/navigation.js" defer></script>
+    <script src="./script/shop.js?v=2" defer></script>
+    <script src="./script/site.js" defer></script>
+  </head>
+  <body class="min-h-screen font-sans antialiased" data-page="loja">
+    <div class="local-page">
+      <div data-site-header></div>
+
+      <main id="store-page" class="store-main">
+        <section class="store-hero" aria-labelledby="store-title" data-scroll-reveal>
+          <p class="store-eyebrow">MONARCH STORE</p>
+          <h1 id="store-title">LOJA <span>OFICIAL</span></h1>
+          <p>Scripts para MTA:SA e bots para Discord, com soluções para a tua comunidade.</p>
+          <a class="store-home-link" href="#catalogo">Explorar catálogo <span aria-hidden="true">→</span></a>
+        </section>
+
+        <section id="catalogo" class="catalog-section" aria-label="Catálogo de soluções">
+          <div class="catalog-heading">
+            <div class="catalog-heading-copy">
+              <h2>Catálogo de soluções</h2>
+              <p data-result-count></p>
+            </div>
+            <button class="cart-trigger store-cart-trigger" type="button" data-open-cart aria-label="Abrir carrinho">
+              <svg class="nav-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="m2 3 2 1 2.5 12h12l3-9H5"></path><circle cx="9" cy="20" r="1"></circle><circle cx="18" cy="20" r="1"></circle></svg>
+              <span>Carrinho</span>
+              <span class="cart-count" data-cart-count>0</span>
+            </button>
+          </div>
+          <div class="product-grid" data-product-grid aria-live="polite"></div>
+          <p class="catalog-empty" data-catalog-empty hidden>Não há produtos disponíveis neste momento.</p>
+        </section>
+      </main>
+
+      <footer class="local-footer">
+        <a href="./Monarch.html#inicio">← Voltar ao site</a>
+        <a href="./regras.html">Suporte</a>
+      </footer>
+    </div>
+  </body>
+</html>

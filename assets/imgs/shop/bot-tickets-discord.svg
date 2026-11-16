@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" fill="none">
+  <defs>
+    <linearGradient id="background" x1="86" x2="682" y1="32" y2="506" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="180" x2="594" y1="130" y2="410" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#dc1553"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="520" rx="28" fill="url(#background)"/>
+  <circle cx="618" cy="106" r="118" fill="#dc1553" fill-opacity=".12"/>
+  <circle cx="156" cy="435" r="150" fill="#2563eb" fill-opacity=".13"/>
+  <rect x="91" y="58" width="578" height="404" rx="20" fill="#0b0d13" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M91 119h578" stroke="#fff" stroke-opacity=".12"/>
+  <circle cx="122" cy="89" r="6" fill="#dc1553"/>
+  <circle cx="144" cy="89" r="6" fill="#eab308"/>
+  <circle cx="166" cy="89" r="6" fill="#22c55e"/>
+  <text x="196" y="95" fill="#a1a1aa" font-family="Arial,sans-serif" font-size="14" letter-spacing="2">MONARCH SUPPORT</text>
+  <rect x="123" y="153" width="514" height="70" rx="12" fill="#171922"/>
+  <circle cx="160" cy="188" r="18" fill="url(#accent)" fill-opacity=".22"/>
+  <path d="M151 188h18m-9-9v18" stroke="#8ba9ff" stroke-linecap="round" stroke-width="2"/>
+  <text x="194" y="183" fill="#f8fafc" font-family="Arial,sans-serif" font-size="16" font-weight="700">Abrir um pedido de suporte</text>
+  <text x="194" y="204" fill="#a1a1aa" font-family="Arial,sans-serif" font-size="12">A equipa responde num canal privado</text>
+  <rect x="123" y="242" width="326" height="178" rx="12" fill="#11131b" stroke="#fff" stroke-opacity=".08"/>
+  <text x="148" y="276" fill="#f8fafc" font-family="Arial,sans-serif" font-size="15" font-weight="700">PEDIDO #1042</text>
+  <rect x="148" y="294" width="202" height="8" rx="4" fill="#fff" fill-opacity=".13"/>
+  <rect x="148" y="313" width="268" height="8" rx="4" fill="#fff" fill-opacity=".08"/>
+  <rect x="148" y="332" width="238" height="8" rx="4" fill="#fff" fill-opacity=".08"/>
+  <rect x="148" y="369" width="112" height="29" rx="14.5" fill="url(#accent)" fill-opacity=".18" stroke="url(#accent)" stroke-opacity=".6"/>
+  <text x="204" y="388" fill="#f8fafc" font-family="Arial,sans-serif" font-size="10" font-weight="700" letter-spacing="1.5" text-anchor="middle">EM ATENDIMENTO</text>
+  <rect x="466" y="242" width="171" height="178" rx="12" fill="#171922"/>
+  <circle cx="551.5" cy="303.5" r="34.5" fill="url(#accent)" fill-opacity=".2" stroke="url(#accent)" stroke-opacity=".65"/>
+  <path d="M533 306v-4a18 18 0 0 1 36 0v4m-36 0a5 5 0 0 0 5 5h4v-12h-4a5 5 0 0 0-5 5Zm36 0a5 5 0 0 1-5 5h-4v-12h4a5 5 0 0 1 5 5Zm-5 8c-2 5-7 8-13 8" stroke="#dbe4ff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <text x="551.5" y="369" fill="#f8fafc" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">TICKETS</text>
+  <text x="551.5" y="390" fill="#a1a1aa" font-family="Arial,sans-serif" font-size="11" text-anchor="middle">SUPORTE ORGANIZADO</text>
+</svg>

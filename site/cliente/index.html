@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111a2e">
+    <meta name="description" content="Consulta os teus produtos e o histórico de encomendas na Monarch Store.">
+    <title>Cliente | Monarch Store</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="/assets/imgs/favicon-monarch.png">
+    <link rel="preload" href="/assets/fonts/Geist-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css?v=4">
+    <script src="/script/api.js?v=4" defer></script>
+    <script src="/script/navigation.js" defer></script>
+    <script src="/cliente/cliente.js?v=2" defer></script>
+  </head>
+  <body class="min-h-screen font-sans antialiased" data-page="conta">
+    <main class="client-dashboard">
+      <aside class="client-sidebar" aria-label="Navegação da área cliente">
+        <div class="client-sidebar-brand">
+          <img class="client-brand-icon" data-site-favicon src="/assets/imgs/favicon-monarch.png" alt="">
+          <div><strong>Cliente</strong><span>MONARCH STORE</span></div>
+        </div>
+
+        <div class="client-sidebar-user">
+          <img data-account-sidebar-avatar alt="" hidden>
+          <span class="client-sidebar-avatar-fallback" data-account-avatar-fallback aria-hidden="true">M</span>
+          <div><strong data-account-sidebar-name>A carregar conta...</strong><span>Conta Discord</span></div>
+        </div>
+
+        <nav class="client-sidebar-nav" role="tablist" aria-orientation="vertical" aria-label="Secções da área cliente">
+          <button class="client-side-link is-active" id="client-tab-products" type="button" role="tab" aria-selected="true" aria-controls="client-panel-products" data-account-tab="products">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path><path d="m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9"></path></svg>
+            <span>Meus produtos</span>
+          </button>
+          <button class="client-side-link" id="client-tab-history" type="button" role="tab" aria-selected="false" aria-controls="client-panel-history" data-account-tab="history" tabindex="-1">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 12a9 9 0 1 0 2.64-6.36L3 8"></path><path d="M3 3v5h5m4-1v5l3 2"></path></svg>
+            <span>Histórico</span>
+          </button>
+        </nav>
+
+        <div class="client-sidebar-footer">
+          <a class="client-side-link client-side-anchor" href="/Monarch.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7M5 12h14"></path></svg>
+            <span>Voltar ao site</span>
+          </a>
+          <button class="client-side-link client-side-button client-logout-link" type="button" data-logout>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3"></path><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"></path></svg>
+            <span>Sair</span>
+          </button>
+        </div>
+      </aside>
+
+      <div class="client-main">
+        <header class="client-page-header">
+          <div>
+            <p class="client-page-eyebrow">ESPAÇO PESSOAL</p>
+            <h1>Área do Cliente</h1>
+            <p data-account-welcome>Estamos a carregar a tua conta...</p>
+          </div>
+          <a class="client-store-link" href="/loja.html">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 3 2 2h16l-2 9H7L5 5"></path><circle cx="9" cy="19" r="1"></circle><circle cx="17" cy="19" r="1"></circle></svg>
+            <span>Explorar loja</span>
+          </a>
+        </header>
+
+        <section class="client-profile-banner" aria-label="Conta Discord">
+          <img class="client-profile-avatar" data-account-avatar alt="" hidden>
+          <span class="client-profile-avatar-fallback" data-account-profile-fallback aria-hidden="true">M</span>
+          <div>
+            <strong data-account-profile-name>A carregar...</strong>
+            <span>Conta ligada através do Discord</span>
+          </div>
+        </section>
+
+        <p class="account-status" data-account-status role="status" aria-live="polite"></p>
+
+        <section class="client-content-panel" id="client-panel-products" role="tabpanel" aria-labelledby="client-tab-products" data-account-panel="products">
+          <div class="client-panel-heading">
+            <div><span class="client-panel-icon" aria-hidden="true">◇</span><h2>Meus produtos</h2></div>
+            <span class="client-panel-note">Produtos disponíveis na tua conta</span>
+          </div>
+          <div class="account-products" data-purchased-products></div>
+          <p class="account-empty" data-purchased-empty hidden>Ainda não tens produtos disponíveis. Os produtos vão aparecer aqui depois de uma compra confirmada ou de uma atribuição pela administração.</p>
+        </section>
+
+        <section class="client-content-panel" id="client-panel-history" role="tabpanel" aria-labelledby="client-tab-history" data-account-panel="history" hidden>
+          <div class="client-panel-heading">
+            <div><span class="client-panel-icon" aria-hidden="true">◷</span><h2>Histórico</h2></div>
+            <span class="client-panel-note">As tuas encomendas e pagamentos</span>
+          </div>
+          <div class="account-orders" data-account-orders></div>
+          <p class="account-empty" data-orders-empty hidden>Ainda não tens encomendas.</p>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

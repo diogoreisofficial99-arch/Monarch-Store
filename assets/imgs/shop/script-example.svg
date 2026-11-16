@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" fill="none">
+  <defs>
+    <linearGradient id="background" x1="84" x2="670" y1="36" y2="508" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#09090b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="200" x2="571" y1="110" y2="421" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2563eb"/>
+      <stop offset="1" stop-color="#dc1553"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="520" rx="28" fill="url(#background)"/>
+  <circle cx="613" cy="106" r="118" fill="#dc1553" fill-opacity=".12"/>
+  <circle cx="174" cy="418" r="150" fill="#2563eb" fill-opacity=".13"/>
+  <rect x="96" y="92" width="568" height="336" rx="18" fill="#0b0d13" stroke="#fff" stroke-opacity=".12"/>
+  <path d="M96 148h568" stroke="#fff" stroke-opacity=".12"/>
+  <circle cx="126" cy="120" r="6" fill="#dc1553"/>
+  <circle cx="148" cy="120" r="6" fill="#eab308"/>
+  <circle cx="170" cy="120" r="6" fill="#22c55e"/>
+  <text x="202" y="126" fill="#a1a1aa" font-family="monospace" font-size="15">monarch.project</text>
+  <path d="m239 218-45 44 45 44M521 218l45 44-45 44" stroke="url(#accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"/>
+  <path d="m420 202-78 120" stroke="#f8fafc" stroke-linecap="round" stroke-width="12"/>
+  <rect x="267" y="354" width="226" height="38" rx="19" fill="url(#accent)" fill-opacity=".14" stroke="url(#accent)" stroke-opacity=".55"/>
+  <text x="380" y="379" fill="#f8fafc" font-family="Arial,sans-serif" font-size="13" font-weight="700" letter-spacing="3" text-anchor="middle">MTA:SA  •  DISCORD</text>
+</svg>

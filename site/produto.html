@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#09090b">
+    <meta name="description" content="Conhece os detalhes e preços dos produtos da Monarch Store.">
+    <title>Monarch Store</title>
+    <link rel="icon" type="image/png" sizes="128x128" href="../assets/imgs/favicon-monarch.png">
+    <link rel="preload" href="../assets/fonts/Geist-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="../assets/fonts/Anton-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script/api.js?v=4" defer></script>
+    <script src="./script/products.js?v=2" defer></script>
+    <script src="./script/navigation.js" defer></script>
+    <script src="./script/shop.js?v=2" defer></script>
+  </head>
+  <body class="min-h-screen font-sans antialiased" data-page="produto">
+    <div class="local-page">
+      <div data-site-header></div>
+
+      <main id="product-page" class="product-main">
+        <p class="product-error" data-product-error role="status" hidden></p>
+        <div data-product-content>
+          <div class="product-page-toolbar">
+            <nav class="product-breadcrumb" aria-label="Navegação estrutural">
+              <a href="./loja.html">Loja</a>
+              <span aria-hidden="true">/</span>
+              <span data-product-category></span>
+            </nav>
+          </div>
+
+          <section class="product-detail-layout" aria-labelledby="product-title">
+            <div class="product-detail-image">
+              <img data-product-image alt="">
+            </div>
+            <div class="product-detail-copy">
+              <p class="store-eyebrow" data-product-category></p>
+              <h1 id="product-title" data-product-title></h1>
+              <div class="product-detail-prices">
+                <strong data-product-price></strong>
+              </div>
+              <p class="product-delivery-note" data-product-description></p>
+              <button class="store-button store-button-primary product-add-button" data-product-add type="button">
+                Adicionar ao carrinho
+              </button>
+              <a class="store-button product-video-link" data-product-video hidden target="_blank" rel="noopener noreferrer">Ver vídeo do produto</a>
+              <p class="product-payment-note">Depois de concluíres o pagamento, acompanha o estado e a disponibilidade do produto na tua área cliente.</p>
+            </div>
+          </section>
+
+          <section class="product-description-section" aria-labelledby="description-title">
+            <h2 id="description-title">O que pode incluir</h2>
+            <ul class="product-detail-list" data-product-details></ul>
+          </section>
+
+          <section class="related-products-section" aria-labelledby="related-products-title">
+            <div class="related-products-heading">
+              <div>
+                <p class="store-eyebrow">PRECISAS DE AJUDA?</p>
+                <h2 id="related-products-title">Estamos aqui para ajudar</h2>
+              </div>
+              <a href="./loja.html">Voltar à loja <span aria-hidden="true">→</span></a>
+            </div>
+            <p class="store-note">Contacta a equipa no Discord para esclarecer dúvidas sobre o produto, a configuração ou soluções personalizadas.</p>
+          </section>
+        </div>
+      </main>
+
+      <footer class="local-footer">
+        <a href="./loja.html">← Voltar à loja</a>
+        <a href="./regras.html">Suporte</a>
+      </footer>
+    </div>
+  </body>
+</html>

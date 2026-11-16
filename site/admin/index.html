@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="pt-PT">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#111a2e">
+    <meta name="description" content="Gere os produtos e as contas da Monarch Store.">
+    <title>Admin | Monarch Store</title>
+    <link rel="icon" type="image/png" href="/assets/imgs/favicon-monarch.png">
+    <link rel="preload" href="/assets/fonts/Geist-Latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/style.css?v=4">
+  </head>
+  <body data-page="admin">
+    <main class="admin-page">
+      <div class="admin-shell">
+        <aside class="admin-sidebar" aria-label="Navegação da administração">
+          <div class="admin-sidebar-brand">
+            <img class="admin-brand-icon" data-site-favicon src="/assets/imgs/favicon-monarch.png" alt="">
+            <div><strong>Admin</strong><span>MONARCH STORE</span></div>
+          </div>
+
+          <div class="admin-sidebar-user">
+            <img data-admin-avatar alt="" hidden>
+            <span class="admin-sidebar-avatar-fallback" data-admin-avatar-fallback aria-hidden="true">M</span>
+            <div><strong data-admin-sidebar-name>A carregar conta...</strong><span data-admin-sidebar-role>Administrador</span></div>
+          </div>
+
+          <nav class="admin-side-nav" role="tablist" aria-orientation="vertical" aria-label="Secções do painel">
+            <button class="admin-side-link is-active" id="admin-tab-products" type="button" role="tab" aria-selected="true" aria-controls="admin-panel-products" data-admin-tab="products" data-page-title="Produtos">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 3 8 4.5v9L12 21l-8-4.5v-9L12 3Z"></path><path d="m4.5 7.7 7.5 4.2 7.5-4.2M12 12v9"></path></svg>
+              <span>Produtos</span><span class="admin-side-count" data-count-products>0</span>
+            </button>
+            <button class="admin-side-link" id="admin-tab-accounts" type="button" role="tab" aria-selected="false" aria-controls="admin-panel-accounts" data-admin-tab="accounts" data-page-title="Contas" tabindex="-1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="10" cy="7" r="4"></circle><path d="M20 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+              <span>Contas</span><span class="admin-side-count" data-count-users>0</span>
+            </button>
+            <button class="admin-side-link" id="admin-tab-orders" type="button" role="tab" aria-selected="false" aria-controls="admin-panel-orders" data-admin-tab="orders" data-page-title="Encomendas" tabindex="-1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg>
+              <span>Encomendas</span><span class="admin-side-count" data-count-orders aria-label="Encomendas pendentes">0</span>
+            </button>
+            <button class="admin-side-link" id="admin-tab-settings" type="button" role="tab" aria-selected="false" aria-controls="admin-panel-settings" data-admin-tab="settings" data-page-title="Configurações" tabindex="-1">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"></circle><path d="m19.4 15 .1.1 1.4 1.1-1.4 2.4-1.7-.7a8 8 0 0 1-1.7 1l-.3 1.8h-2.8l-.3-1.8a8 8 0 0 1-1.7-1l-1.7.7-1.4-2.4 1.4-1.1a7 7 0 0 1 0-2l-1.4-1.1 1.4-2.4 1.7.7a8 8 0 0 1 1.7-1l.3-1.8h2.8l.3 1.8a8 8 0 0 1 1.7 1l1.7-.7 1.4 2.4-1.4 1.1a7 7 0 0 1 0 2Z" transform="translate(-1 -1)"></path></svg>
+              <span>Configurações</span>
+            </button>
+          </nav>
+
+          <div class="admin-sidebar-footer">
+            <a class="admin-side-link admin-side-anchor" href="/Monarch.html">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 19-7-7 7-7M5 12h14"></path></svg>
+              <span>Voltar ao site</span>
+            </a>
+            <button class="admin-side-link admin-side-button admin-logout-link" type="button" data-admin-logout>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17l5-5-5-5m5 5H3"></path><path d="M12 3h7a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-7"></path></svg>
+              <span>Sair</span>
+            </button>
+          </div>
+        </aside>
+
+        <div class="admin-main">
+          <header class="admin-topbar">
+            <div>
+              <span class="admin-page-kicker">MONARCH STORE · ADMINISTRAÇÃO</span>
+              <h1 data-admin-page-title>Produtos</h1>
+              <p class="admin-welcome" data-admin-welcome></p>
+            </div>
+          </header>
+
+          <section class="admin-state" data-admin-state aria-live="polite">
+            <span class="admin-state-spinner" aria-hidden="true"></span>
+            <p data-admin-state-message>A validar permissões...</p>
+          </section>
+
+          <div class="admin-content" data-admin-content hidden>
+            <div class="admin-status" data-admin-status role="status" aria-live="polite" aria-atomic="true" hidden></div>
+
+            <section class="admin-panel" id="admin-panel-products" role="tabpanel" aria-labelledby="admin-tab-products" data-admin-panel="products">
+              <div class="admin-panel-heading">
+                <div>
+                  <span class="admin-panel-kicker">CATÁLOGO DA LOJA</span>
+                  <h2>Produtos</h2>
+                  <p>Adiciona, edita ou remove produtos do catálogo.</p>
+                </div>
+                <button class="admin-primary-button" type="button" data-admin-add-product>+ Novo produto</button>
+              </div>
+
+              <form class="admin-form" data-admin-product-form hidden>
+                <div class="admin-form-heading">
+                  <div><span class="admin-panel-kicker">DETALHES DO CATÁLOGO</span><h3 data-product-form-title>Novo produto</h3></div>
+                  <button class="admin-icon-button" type="button" aria-label="Fechar formulário" data-admin-cancel-product>×</button>
+                </div>
+                <div class="admin-form-grid">
+                  <label>Nome do produto<input name="name" required maxlength="120"></label>
+                  <label>Categoria<input name="category" required maxlength="80" placeholder="Script MTA ou Bot Discord"></label>
+                  <input name="originalId" type="hidden">
+                  <input name="id" type="hidden">
+                  <input name="categoryName" type="hidden">
+                  <input name="priceLabel" type="hidden">
+                  <input name="sortOrder" type="hidden" value="0">
+                  <label>Preço (€)<input name="priceEuros" type="number" min="0" step="0.01"></label>
+                  <label>Imagem (URL)<input name="image" type="text" maxlength="500" placeholder="/assets/imgs/produto.png"></label>
+                  <label class="admin-form-wide admin-upload-field">Imagem do produto
+                    <span>Escolhe uma imagem PNG, JPG ou WebP (máximo 4 MB).</span>
+                    <input name="imageFile" type="file" accept="image/png,image/jpeg,image/webp">
+                  </label>
+                  <label>Link do vídeo (opcional)<input name="videoUrl" type="url" maxlength="1000" placeholder="https://youtu.be/..."></label>
+                  <label>Link de download (opcional)<input name="downloadUrl" type="url" maxlength="1000" placeholder="https://..."></label>
+                  <label class="admin-form-wide">Descrição<textarea name="description" rows="3" maxlength="2000" required></textarea></label>
+                  <label class="admin-form-wide">Detalhes (um por linha)<textarea name="details" rows="3"></textarea></label>
+                  <label class="admin-form-wide">Ficheiro de entrega<input name="productFile" type="file"></label>
+                  <label class="admin-checkbox"><input name="featured" type="checkbox"><span>Destacar na página inicial</span></label>
+                  <label class="admin-checkbox"><input name="active" type="checkbox" checked><span>Produto ativo</span></label>
+                </div>
+                <div class="admin-form-footer">
+                  <span class="admin-inline-status" data-download-status aria-live="polite"></span>
+                  <div><button class="admin-secondary-button" type="button" data-admin-cancel-product>Cancelar</button><button class="admin-primary-button" type="submit">Guardar produto</button></div>
+                </div>
+              </form>
+
+              <div class="admin-list" data-admin-products></div>
+              <div class="admin-empty" data-admin-products-empty hidden>
+                <span class="admin-empty-icon" aria-hidden="true">◇</span>
+                <h3>Ainda não há produtos</h3>
+                <p>Cria o primeiro produto para começar a montar o catálogo da loja.</p>
+                <button class="admin-secondary-button" type="button" data-admin-empty-add>Adicionar produto</button>
+              </div>
+            </section>
+
+            <section class="admin-panel" id="admin-panel-accounts" role="tabpanel" aria-labelledby="admin-tab-accounts" data-admin-panel="accounts" hidden>
+              <div class="admin-panel-heading">
+                <div><span class="admin-panel-kicker">COMUNIDADE</span><h2>Contas</h2><p>Gere utilizadores, permissões e produtos atribuídos.</p></div>
+              </div>
+              <div class="admin-list" data-admin-users></div>
+              <div class="admin-empty" data-admin-users-empty hidden>
+                <span class="admin-empty-icon" aria-hidden="true">◎</span>
+                <h3>Sem contas registadas</h3>
+                <p>As contas criadas através do Discord vão aparecer aqui.</p>
+              </div>
+
+            </section>
+
+            <section class="admin-panel" id="admin-panel-orders" role="tabpanel" aria-labelledby="admin-tab-orders" data-admin-panel="orders" hidden>
+              <div class="admin-panel-heading">
+                <div><span class="admin-panel-kicker">VENDAS</span><h2>Encomendas</h2><p>Acompanha pagamentos, confirma pagamentos PayPal.me ou combinados no Discord e cancela encomendas pendentes.</p></div>
+              </div>
+              <div class="admin-list" data-admin-orders></div>
+              <div class="admin-empty" data-admin-orders-empty hidden>
+                <span class="admin-empty-icon" aria-hidden="true">◷</span>
+                <h3>Sem encomendas por agora</h3>
+                <p>As novas encomendas vão aparecer aqui.</p>
+              </div>
+            </section>
+
+            <section class="admin-panel" id="admin-panel-settings" role="tabpanel" aria-labelledby="admin-tab-settings" data-admin-panel="settings" hidden>
+              <div class="admin-panel-heading">
+                <div><span class="admin-panel-kicker">PERSONALIZAÇÃO</span><h2>Configurações</h2><p>Gere a identidade visual e escolhe a forma de pagamento.</p></div>
+              </div>
+              <div class="admin-settings-restricted" data-admin-settings-restricted hidden>
+                <strong>Acesso restrito</strong>
+                <p>A identidade visual só pode ser alterada pelo fundador.</p>
+              </div>
+              <form class="admin-form admin-brand-form" data-admin-brand-form>
+                <div class="admin-form-grid">
+                  <label class="admin-form-wide">Nome da loja<input name="siteName" required maxlength="80"></label>
+                  <label>Logo (URL)<input name="logoUrl" type="text" maxlength="500" placeholder="/assets/imgs/logo.png"></label>
+                  <label class="admin-upload-field">Carregar logo
+                    <img class="admin-brand-preview" data-brand-preview="logo" alt="Pré-visualização da logo" hidden>
+                    <span>PNG, JPG ou WebP · máximo 4 MB</span>
+                    <input name="logoFile" type="file" accept="image/png,image/jpeg,image/webp">
+                  </label>
+                  <label>Favicon (URL)<input name="faviconUrl" type="text" maxlength="500" placeholder="/assets/imgs/favicon.png"></label>
+                  <label class="admin-upload-field">Carregar favicon
+                    <img class="admin-brand-preview admin-brand-preview-icon" data-brand-preview="favicon" alt="Pré-visualização do favicon" hidden>
+                    <span>PNG, JPG ou WebP · máximo 4 MB</span>
+                    <input name="faviconFile" type="file" accept="image/png,image/jpeg,image/webp">
+                  </label>
+                  <div class="admin-form-wide">
+                    <span class="admin-panel-kicker">PAGAMENTOS</span>
+                    <p>No Checkout, o pagamento é capturado automaticamente depois de o cliente o aprovar no PayPal. PayPal.me exige confirmação manual; sem PayPal, o cliente conclui o pedido por ticket no Discord.</p>
+                  </div>
+                  <label class="admin-form-wide">Método de pagamento
+                    <select class="admin-role-select" name="paypalMethod">
+                      <option value="manual">Sem PayPal — ticket no Discord</option>
+                      <option value="checkout">PayPal Checkout — captura automática</option>
+                      <option value="paypal_me">PayPal.me — confirmação manual</option>
+                    </select>
+                  </label>
+                  <label data-paypal-checkout-field>Ambiente PayPal
+                    <select class="admin-role-select" name="paypalEnvironment">
+                      <option value="sandbox">Sandbox (testes)</option>
+                      <option value="live">Live (pagamentos reais)</option>
+                    </select>
+                  </label>
+                  <label data-paypal-checkout-field>Client ID<input name="paypalClientId" type="text" maxlength="256" autocomplete="off"></label>
+                  <label data-paypal-checkout-field>Client Secret<input name="paypalClientSecret" type="password" maxlength="512" autocomplete="new-password" placeholder="Introduz para atualizar o secret"></label>
+                  <label class="admin-form-wide" data-paypal-me-field hidden>Link PayPal.me
+                    <input name="paypalMeUrl" type="text" maxlength="500" autocomplete="url" placeholder="https://paypal.me/nomedaconta">
+                    <span class="admin-field-hint">O valor do pedido é acrescentado automaticamente. O pagamento tem de ser confirmado manualmente.</span>
+                  </label>
+                </div>
+                <div class="admin-form-footer">
+                  <span class="admin-inline-status" data-brand-status aria-live="polite"></span>
+                  <button class="admin-primary-button" type="submit">Guardar configurações</button>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <dialog class="store-dialog admin-account-products-dialog" data-account-products-dialog aria-labelledby="account-products-title">
+      <header class="admin-account-dialog-header">
+        <div>
+          <span class="admin-panel-kicker">CONTA</span>
+          <h2 id="account-products-title" data-account-products-title>Produtos da conta</h2>
+          <p data-account-products-subtitle></p>
+        </div>
+        <button class="dialog-close" type="button" data-account-products-close aria-label="Fechar">×</button>
+      </header>
+      <div class="admin-account-dialog-content">
+        <form class="admin-account-product-form" data-account-product-form>
+          <label id="admin-account-product-select-label" for="admin-account-product-select-trigger">Adicionar produto</label>
+          <div class="admin-account-product-controls">
+            <div class="admin-product-picker" data-account-product-picker>
+              <button
+                class="admin-product-picker-trigger"
+                id="admin-account-product-select-trigger"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+                aria-controls="admin-account-product-options"
+                aria-labelledby="admin-account-product-select-label admin-account-product-select-value"
+                disabled
+              >
+                <span class="admin-product-picker-label" id="admin-account-product-select-value" data-account-product-select-label>Selecionar produto</span>
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="m5 7.5 5 5 5-5"></path></svg>
+              </button>
+              <div
+                class="admin-product-picker-options"
+                id="admin-account-product-options"
+                role="listbox"
+                aria-labelledby="admin-account-product-select-label"
+                hidden
+              ></div>
+              <select id="admin-account-product-select" data-account-product-select hidden tabindex="-1" aria-hidden="true">
+                <option value="">Selecionar produto</option>
+              </select>
+            </div>
+            <button class="store-button admin-action-primary" type="submit" data-account-product-add disabled>Adicionar</button>
+          </div>
+          <p data-account-product-hint hidden></p>
+        </form>
+        <div class="admin-account-products-list" data-account-products-list></div>
+        <p class="admin-account-products-empty" data-account-products-empty hidden>Esta conta ainda não tem produtos atribuídos.</p>
+        <p class="admin-account-products-status" data-account-products-status role="status" aria-live="polite" hidden></p>
+      </div>
+    </dialog>
+    <script src="/script/api.js?v=4"></script>
+    <script src="/script/navigation.js"></script>
+    <script src="/admin/admin.js?v=3"></script>
+  </body>
+</html>
