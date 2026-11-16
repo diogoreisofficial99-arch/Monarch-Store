@@ -626,6 +626,7 @@ brandingForm.addEventListener("submit", async (event) => {
       paypalEnvironment: formData.get("paypalEnvironment"),
       paypalClientId: formData.get("paypalClientId").trim(),
       paypalClientSecret: formData.get("paypalClientSecret").trim(),
+      paypalWebhookId: formData.get("paypalWebhookId").trim(),
       paypalMeUrl: formData.get("paypalMeUrl").trim()
     };
     await window.MonarchAPI.request("/api/admin/settings", { method: "PUT", body: JSON.stringify(settings) });
@@ -736,7 +737,7 @@ window.MonarchAPI.sessionPromise.then(async (session) => {
     const settings = await window.MonarchAPI.request("/api/admin/settings");
     settings.logoUrl = window.MonarchAPI.normalizeAssetUrl(settings.logoUrl);
     settings.faviconUrl = window.MonarchAPI.normalizeAssetUrl(settings.faviconUrl);
-    for (const key of ["siteName", "logoUrl", "faviconUrl", "paypalMethod", "paypalEnvironment", "paypalClientId", "paypalMeUrl"]) {
+    for (const key of ["siteName", "logoUrl", "faviconUrl", "paypalMethod", "paypalEnvironment", "paypalClientId", "paypalMeUrl", "paypalWebhookId"]) {
       brandingForm.elements.namedItem(key).value = settings[key] || "";
     }
     updatePaypalSettingsFields();
